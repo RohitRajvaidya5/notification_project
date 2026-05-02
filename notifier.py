@@ -21,6 +21,8 @@ logging.basicConfig(
 # Replace with your Pushbullet Access Token
 ACCESS_TOKEN = os.getenv("PUSHBULLET_TOKEN")
 
+print("TOKEN:", ACCESS_TOKEN)
+
 def send_notification(title, message, retries=3, delay=2):
     url = "https://api.pushbullet.com/v2/pushes"
     
