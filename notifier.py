@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 import os
 import time
 import logging
+import os
+
 
 # Load environment variables from .env file
 load_dotenv()
@@ -17,7 +19,7 @@ logging.basicConfig(
 )
 
 # Replace with your Pushbullet Access Token
-ACCESS_TOKEN = os.getenv("access_token")
+ACCESS_TOKEN = os.getenv("PUSHBULLET_TOKEN")
 
 def send_notification(title, message, retries=3, delay=2):
     url = "https://api.pushbullet.com/v2/pushes"
