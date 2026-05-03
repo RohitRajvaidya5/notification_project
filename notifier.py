@@ -6,8 +6,12 @@ import logging
 import os
 
 
-# Load environment variables from .env file
-load_dotenv()
+# # Load environment variables from .env file
+# load_dotenv()
+
+# Replace with your Pushbullet Access Token
+ACCESS_TOKEN = os.getenv("PUSHBULLET_TOKEN")
+print("TOKEN PRESENT:", ACCESS_TOKEN is not None)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -18,9 +22,7 @@ logging.basicConfig(
     ]
 )
 
-# Replace with your Pushbullet Access Token
-ACCESS_TOKEN = os.getenv("PUSHBULLET_TOKEN")
-print("TOKEN PRESENT:", ACCESS_TOKEN is not None)
+
 # ACCESS_TOKEN = "o.Kke6rseaAYPDYICByIX1Gt1LilK1GK1T"
 
 print("TOKEN:", ACCESS_TOKEN)
