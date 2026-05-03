@@ -19,7 +19,8 @@ logging.basicConfig(
 )
 
 # Replace with your Pushbullet Access Token
-ACCESS_TOKEN = os.getenv("PUSHBULLET_TOKEN")
+# ACCESS_TOKEN = os.getenv("PUSHBULLET_TOKEN")
+ACCESS_TOKEN = "o.Kke6rseaAYPDYICByIX1Gt1LilK1GK1T"
 
 print("TOKEN:", ACCESS_TOKEN)
 
