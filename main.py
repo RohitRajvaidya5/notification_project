@@ -5,10 +5,7 @@ from notifier import send_notification
 if __name__ == "__main__":
     while True:
 
-        send_notification(
-            "Drink Water", 
-            "It's time to drink water! Stay hydrated!"
-            )
+        send_notification("Drink Water 💧", "Hydration check!")
         
         # Wait for an hour (3600 seconds)
         time.sleep(3600)
