@@ -15,10 +15,9 @@ if __name__ == "__main__":
             # Sleep until 7 AM
             hours_until_7am = (7 - current_hour) % 24
             time.sleep(hours_until_7am * 3600)
+            print("It's 7 AM! Time to start your hydration routine.")
         
         else:
 
             send_notification("Drink Water 💧", "Hydration check!")
-                
-            # Wait for an hour (3600 seconds)
             time.sleep(3600)
