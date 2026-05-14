@@ -12,7 +12,9 @@ if __name__ == "__main__":
 
 
         if 0 <= current_hour < 7:
-            print("yes")
+            # Sleep until 7 AM
+            hours_until_7am = (7 - current_hour) % 24
+            time.sleep(hours_until_7am * 3600)
         
         else:
 
