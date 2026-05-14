@@ -1,11 +1,22 @@
 import time
 from notifier import send_notification
+from datetime import datetime
+
+
 
 # Drink water remainder every hour
 if __name__ == "__main__":
     while True:
 
-        send_notification("Drink Water 💧", "Hydration check!")
+        current_hour = datetime.now().hour
+
+
+        if 0 <= current_hour < 7:
+            print("yes")
         
-        # Wait for an hour (3600 seconds)
-        time.sleep(3600)
+        else:
+
+            send_notification("Drink Water 💧", "Hydration check!")
+                
+            # Wait for an hour (3600 seconds)
+            time.sleep(3600)
