@@ -22,4 +22,5 @@ if __name__ == "__main__":
         #     send_notification("Drink Water 💧", "Hydration check!")
         #     time.sleep(3600)
         send_notification("Drink Water 💧", "Hydration check!")
+        time.sleep(3600)
 
