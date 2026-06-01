@@ -38,8 +38,7 @@ def send_notification(title, message, retries=3, delay=2):
     data = {
     "type": "link",
     "title": "Drink Water 💧",
-    "body": "Hydration check!",
-    "url": "https://your-image-url.com/image.jpg"
+    "body": "Hydration check!"
 }
 
     attempts = 0
