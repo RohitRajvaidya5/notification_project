@@ -1,13 +1,37 @@
-# Notification Project
+<p align="center">
+  <img
+    src="https://i.postimg.cc/52F507VM/Chat-GPT-Image-Jun-21-2026-11-10-51-PM.png"
+    alt="Notification Project Banner"
+    width="70%"
+    style="border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);"
+  >
+</p>
 
-A Python-based notification service supporting multiple notification providers.
+<h1 align="center">🔔 Notification Project</h1>
 
-Currently supported providers:
+<p align="center">
+A lightweight Python notification service supporting Pushbullet and ntfy.sh
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11+-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/ntfy-Supported-success" alt="ntfy">
+  <img src="https://img.shields.io/badge/Pushbullet-Supported-green" alt="Pushbullet">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT">
+</p>
+
+---
+
+## 🚀 Overview
+
+A Python-based notification framework that supports multiple notification providers with a simple and reusable API.
+
+### Supported Providers
 
 * Pushbullet
 * ntfy.sh
 
-The project can be used for:
+### Use Cases
 
 * Job alerts
 * Hydration reminders
@@ -15,16 +39,17 @@ The project can be used for:
 * AI agent notifications
 * Scheduled reminders
 * System alerts
+* Automation workflows
 
 ---
 
-## Features
+## ✨ Features
 
-### ntfy Support
+### ntfy.sh Integration
 
 * Custom notification topics
 * Notification titles
-* Priority levels (1-5)
+* Priority levels (1–5)
 * Tags / emojis
 * Click actions
 * Action buttons
@@ -33,24 +58,25 @@ The project can be used for:
 * Email forwarding
 * File attachments
 
-### Pushbullet Support
+### Pushbullet Integration
 
-* Push notifications to mobile devices
+* Mobile push notifications
 * Retry mechanism
 * Error handling
 * Logging support
 
 ### General Features
 
-* Logging to console and file
+* Console and file logging
 * Type hints
 * Request timeout handling
-* Connection reuse using `requests.Session`
-* Modular notification provider design
+* Reusable HTTP sessions (`requests.Session`)
+* Environment variable support
+* Modular provider architecture
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 NotificationProject/
@@ -60,35 +86,36 @@ NotificationProject/
 ├── app.log
 ├── .env
 ├── requirements.txt
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## Installation
+## ⚙️ Installation
 
-Clone the repository:
+### Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd NotificationProject
 ```
 
-Create a virtual environment:
+### Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate the environment:
+### Activate the Environment
 
-Windows PowerShell:
+#### Windows PowerShell
 
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-Install dependencies:
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -96,19 +123,19 @@ pip install -r requirements.txt
 
 ---
 
-## Environment Variables
+## 🔐 Environment Variables
 
-Create a `.env` file:
+Create a `.env` file in the project root:
 
 ```env
 PUSHBULLET_TOKEN=your_pushbullet_access_token
 ```
 
-The Pushbullet token is only required when using Pushbullet notifications.
+> Pushbullet credentials are only required when using Pushbullet notifications.
 
 ---
 
-## ntfy Example
+## 📢 ntfy Notification Example
 
 ```python
 from notifier import send_notification_with_ntfy
@@ -128,7 +155,7 @@ send_notification_with_ntfy(
 
 ---
 
-## Pushbullet Example
+## 📱 Pushbullet Notification Example
 
 ```python
 from notifier import send_notification_with_pushnotification
@@ -141,10 +168,11 @@ send_notification_with_pushnotification(
 
 ---
 
-## Hydration Reminder Example
+## 💧 Hydration Reminder Example
 
 ```python
 import time
+from notifier import send_notification_with_ntfy
 
 while True:
 
@@ -158,7 +186,7 @@ while True:
 
 ---
 
-## Logging
+## 📝 Logging
 
 Logs are written to:
 
@@ -174,47 +202,50 @@ Example:
 
 ---
 
-## Notification Parameters
+## 📋 Notification Parameters
 
-| Parameter | Description                          |
-| --------- | ------------------------------------ |
-| topic     | ntfy topic name                      |
-| title     | Notification title                   |
-| message   | Notification body                    |
-| priority  | 1-5 notification priority            |
-| tags      | Notification emoji tags              |
-| click     | URL opened when notification clicked |
-| actions   | Notification action buttons          |
-| icon      | Custom icon URL                      |
-| markdown  | Enable markdown formatting           |
-| email     | Forward notification to email        |
-| attach    | Attach file URL                      |
+| Parameter | Description                             |
+| --------- | --------------------------------------- |
+| topic     | ntfy topic name                         |
+| title     | Notification title                      |
+| message   | Notification body                       |
+| priority  | Notification priority (1–5)             |
+| tags      | Notification emoji tags                 |
+| click     | URL opened when notification is clicked |
+| actions   | Interactive action buttons              |
+| icon      | Custom icon URL                         |
+| markdown  | Enable Markdown formatting              |
+| email     | Forward notification to email           |
+| attach    | Attach file URL                         |
 
 ---
 
-## Future Improvements
+## 🛠 Technologies Used
+
+* Python
+* requests
+* python-dotenv
+* Pushbullet API
+* ntfy.sh API
+
+---
+
+## 🎯 Future Improvements
 
 * Telegram integration
 * Slack integration
 * Discord integration
 * Email notifications
-* Notification provider abstraction layer
+* Provider abstraction layer
 * Docker support
 * Configuration management
 * Unit tests
+* CI/CD pipeline
 
 ---
 
-## Technologies Used
+## 📄 License
 
-* Python
-* requests
-* python-dotenv
-* ntfy.sh
-* Pushbullet
+This project is licensed under the MIT License.
 
----
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+See the `LICENSE` file for details.
