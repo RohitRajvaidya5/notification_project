@@ -11,7 +11,7 @@ def send_every_hour_notification():
             title="Hourly Notification",
             message=f"Current time: {current_time} : Let's keep track of the time and stay productive!",
             tags=["hourly"],
-            priority=4
+            priority=3
         )
         time.sleep(3600)
 
