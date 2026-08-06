@@ -3,18 +3,30 @@ from datetime import datetime
 import time
 
 
-def send_every_hour_notification():
-    while True:
-        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        send_notification_with_ntfy(
-            topic="hourly-tracker",
-            title="Hourly Notification",
-            message=f"Current time: {current_time} : Let's keep track of the time and stay productive!",
-            tags=["hourly"],
-            priority=3
-        )
-        time.sleep(3600)
+# def send_every_hour_notification():
+#     while True:
+#         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#         send_notification_with_ntfy(
+#             topic="hourly-tracker",
+#             title="Hourly Notification",
+#             message=f"Current time: {current_time} : Let's keep track of the time and stay productive!",
+#             tags=["hourly"],
+#             priority=3
+#         )
+#         time.sleep(3600)
+
 
 
 if __name__ == "__main__":
-    send_every_hour_notification()
+    # Uncomment the following line to enable hourly notifications
+    # send_every_hour_notification()
+
+    # For demonstration purposes, send a single notification
+
+    send_notification_with_ntfy(
+                topic="hourly-tracker",
+                title="Hourly Notification",
+                message=f"Let's keep track of the time and stay productive!",
+                tags=["hourly"],
+                priority=3
+            )

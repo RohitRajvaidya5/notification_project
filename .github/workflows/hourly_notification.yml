@@ -1,7 +1,10 @@
-name: One-time Notification
+name: Hourly Notification
 
 on:
   workflow_dispatch:
+
+  schedule:
+    - cron: '0 * * * *'   # Runs at the start of every hour (UTC)
 
 jobs:
   notify:
